@@ -1,1 +1,9 @@
-SImple single uwsgi node setup tool
+Simple single uwsgi node setup tool.
+
+Currently it can be used this way for example:
+
+:\> fab setup_new -H 192.168.1.1 -u root 
+
+This tools contains two parts: first written in Fabfile and makes server initial bootstrap, e.g. it's setup base software package like build-essential and, in fact Puppet tool. Second part is a Puppet module, which uploaded onto server and makes full software setup for simple uWSGI node. Currently it installs uWSGI, Git, Virtuelenvwrapper and Nginx. Also, it runs uWSGI in Emperor mode for listening /etc/uwsgi/apps-enabled
+
+That's al for now. Stay tuned! =P
